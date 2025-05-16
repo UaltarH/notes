@@ -63,10 +63,9 @@ git update-index --no-assume-unchanged [path/to/the/file.extension]
 ### Ignore lines on tracked files
 
 1. Create/Open gitattributes file:
-2. <project root>/.gitattributes (will be committed into repo)
-OR
-<project root>/.git/info/attributes (won't be committed into repo)
-1. Add a line defining the files to be filtered:
+   - <project root>/.gitattributes (will be committed into repo)
+   - OR <project root>/.git/info/attributes (won't be committed into repo)
+2. Add a line defining the files to be filtered:
 `*.php filter=phpgitignore`, i.e. run filter named phpgitignore on all *.php files
 Define the phpgitignore filter in your gitconfig:
 ```sh
@@ -94,9 +93,9 @@ git sparse-checkout add <path>
 In Windows don't use quotes for pathname
 
 
-## ClÃ© GPG
+## Clé GPG
 
-### GÃ©nÃ©ration de clÃ©
+### Génération de clé
 ```sh
 $ gpg --full-gen-key
 gpg (GnuPG) 2.2.23; Copyright (C) 2020 Free Software Foundation, Inc.
@@ -129,15 +128,15 @@ Is this correct? (y/N) y
 GnuPG needs to construct a user ID to identify your key.
 Real name: Utilisateur De La Machine
 Email address: utilisateur@machine.fr
-Comment: dÃ©mo
+Comment: démo
 ```
 
-### Lister les clÃ©s GPG
+### Lister les clés GPG
 ```sh
 gpg --list-secret-keys --keyid-format=long
 ```
 
-### Exporter la clÃ©
+### Exporter la clé
 ```sh
 armor --export 1234AZER
 ```
