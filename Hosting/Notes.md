@@ -96,3 +96,20 @@ cd endlessh
 nano docker-compose.yml
 docker compose up  -d
 ```
+
+---
+# Useful commands
+
+## How to know which internal IP address is available :
+
+```
+nmap -sP 192.168.31.*
+```
+
+# Mount an external volume in an LXC
+
+## Synology NAS shared folder
+
+```bash
+mount -t nfs 192.168.XX.XX:/volume1/<your shared folder> /mnt/<path to mount>
+```
