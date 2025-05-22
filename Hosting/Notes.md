@@ -1,6 +1,6 @@
 # Port forwarding
 Only forward port `80` and `443` for respectively `HTTP` and `HTTPS` should be plenty enough since everything will be proxied by your reverse proxy
-![[port_forwarding.png.png]]
+![[port_forwarding.png]]
 # Hosting setup
 
 ## Generating SSH key
