@@ -62,13 +62,12 @@ git update-index --no-assume-unchanged [path/to/the/file.extension]
 
 ### Ignore lines on tracked files
 
-1. Create/Open `gitattributes` file:
-2. `<project root>/.gitattributes` (will be committed into repo)
-OR
-`<project root>/.git/info/attributes` (won't be committed into repo)
-3. Add a line defining the files to be filtered:
-`*.php filter=phpgitignore`, i.e. run filter named `phpgitignore` on all `*.php` files
-Define the phpgitignore filter in your gitconfig:
+1. Create/Open gitattributes file:
+   - `<project root>/.gitattributes` (will be committed into repo)
+   - OR `<project root>/.git/info/attributes` (won't be committed into repo)
+2. Add a line defining the files to be filtered:
+`*.php filter=phpgitignore`, i.e. run filter named phpgitignore on all `.php` files
+3. Define the phpgitignore filter in your gitconfig:
 ```sh
 # delete lines that end with //ignore
 git config --global filter.phpgitignore.clean "sed '/\/\/ignore$/d'"
@@ -129,7 +128,7 @@ Is this correct? (y/N) y
 GnuPG needs to construct a user ID to identify your key.
 Real name: Utilisateur De La Machine
 Email address: utilisateur@machine.fr
-Comment: dÃ©mo
+Comment: démo
 ```
 
 ### Lister les clés GPG
