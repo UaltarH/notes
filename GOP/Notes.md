@@ -1,0 +1,6 @@
+- Synthétiser ses compétences par thématiques métier
+- Illustrer ses compétence par des exemples concrets (projets etc..)
+- Présenter les résultats de manière concrète
+- Exprimer son projet professionnel
+- Créer un support de présentation
+- Mettre à jour profil LinkedIn

@@ -74,6 +74,22 @@ Lock the account:
 sudo passwd -l root
 ```
 
+### Network settings
+
+#### Change DHCP to static local ip
+
+`/etc/network/interface`
+```
+...
+iface ens18 inet static
+
+address 192.168.1.XX/24 ## <-- define ip here for machine
+```
+
+#### Change DNS server
+
+`/etc/resolv.conf`
+
 
 ### Setting up Docker
 
