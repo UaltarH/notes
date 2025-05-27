@@ -125,10 +125,7 @@ docker compose up  -d
 nmap -sP 192.168.31.*
 ```
 
-# Mount an external volume in an LXC
 
-## Synology NAS shared folder
+# Backup
 
-```bash
-mount -t nfs 192.168.XX.XX:/volume1/<your shared folder> /mnt/<path to mount>
-```
+Pour les bdd, peut être trouver un moyen de just backup certains dossier en particulier où est contenu la bdd.

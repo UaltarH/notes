@@ -43,3 +43,35 @@ spec:
       - name: nginx
 # etc...
 ```
+
+## Service
+
+1. Cluster IP
+   Permet d'exposer un port en interne. Par défaut un service est de type `Cluster IP`.
+   `targerPort`: le port de **l'image**
+   `port`: port interne à exposer
+2. NodePort
+   ne pas utiliser en prod pour l'exposition des ports vers l'extérieur
+3. LoadBalancer
+	1. D'abord créer u clusterIP,  car l'Ingress va devoir se connecter via le port interne exposé. Puis 1 second manifest, le load balancer
+## Ingress
+Ingress controller: Nginx ou Traefik, on ne peut en avoir qu'un seul par application.
+Utilisé par le loadbalancer.
+### TLS/SSL
+ajouter
+```yml
+spec:
+	tls:
+	- hosts:
+		- domain.lan
+		secretName: domain-tls-secret
+```
+
+Créer un certifical TLS auto-signé :
+```bash
+kubctl create secret tls domain-tls-secret \
+
+```
+
+## BDD
+Vaut mieux pas l'intégrer dans kube, sinon il faut utiliser un nodeSelector pour attacher le pod à un Worker donné ou Master, pour être sur où la BDD sera.
