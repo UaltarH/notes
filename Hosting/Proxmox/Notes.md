@@ -39,3 +39,18 @@ add the following line :
 mp0: nas:<CT ID>/vm-<CT ID>-disk-0.raw,mp=/mnt/proxmox,backup=1,size=8G
 ```
 *Note* : If you want multiple LXCs to **share same volume** you can just copy the same line over to other LXC configs
+
+# Tailscale
+
+## Troubleshooting
+
+If you can't start Tailscale, try starting `tailscaled`service :
+```bash
+systemctl start tailscaled
+```
+
+Check the status, if the error is ` /dev/net/tun does not exist`or `Module tun not found`. Go to `proxmox`node and add these 2 lines to `/etc/pve/lxc/<CT ID>.conf/:
+```conf
+lxc.cgroup2.devices.allow: c 10:200 rwm
+lxc.mount.entry: /dev/net dev/net none bind,create=dir
+```
